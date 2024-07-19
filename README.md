@@ -2,6 +2,8 @@
 
 This repository contains scripts to automate the process of dealing with a problematic file in the CrowdStrike directory that causes a blue screen error on Windows systems.
 
+# If you have a Bluescreen 
+
 ## Scripts
 
 - `delete_file.ps1`: This PowerShell script deletes the problematic file causing the blue screen and restarts Windows into normal mode.
@@ -21,7 +23,7 @@ To automate the process, follow the steps below:
 Run the following PowerShell command as an administrator in Safe Mode with Command Prompt:
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Phoenixx52/crowdstrike-major-it-outages/main/delete_file.ps1" -OutFile "C:\delete_file.ps1"; .\C:\delete_file.ps1
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Phoenixx52/crowdstrike-major-it-outages/main/delete_file.ps1" -OutFile "C:\Users\Public\delete_file.ps1"; powershell.exe -ExecutionPolicy Bypass -File "C:\Users\Public\delete_file.ps1"
 ```
 
 ### Automatic Process
@@ -38,7 +40,7 @@ The `delete_file.ps1` script will:
 - **Boot into Safe Mode with Command Prompt manually.**
 - **Run the PowerShell command to download and execute the script.**
 
-# If you don't have a Bluescreen yet
+# If you don't have a Bluescreen
 
 ## Scripts
 
